@@ -1,17 +1,22 @@
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="adminlte/index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+
+      <?php for($i = 0; $i < count($itens_de_menu); $i++): ?>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="adminlte/index<?= $i ?>.html" class="nav-link"><?= $itens_de_menu[$i] ?></a>
+        </li>
+      <?php endfor ?>
+
     </ul>
 
+    <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
       <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
@@ -130,3 +135,4 @@
       </li>
     </ul>
   </nav>
+  <!-- /.navbar -->
